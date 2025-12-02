@@ -50,13 +50,13 @@ def refeicoes():
 
         primeiroTicket.click()
 
-        time.sleep(2)
+        time.sleep(3.5)
         segundoTicket = navegador.find_element(By.XPATH, "//button[@title='Adicionar Ticket']")
 
     
         segundoTicket.click()
 
-        time.sleep(2)
+        time.sleep(4)
         sair = navegador.find_element(By.XPATH,"/html/body/div[13]/div[1]/a[1]/span")
         sair.click()
         
@@ -73,7 +73,7 @@ def refeicoes():
 
         nome = tabela.loc[posicao,"nome"]
         print(f"Refeição do(a) {nome} Feita !")
-
+        
 if __name__ == "__main__":
     refeicoes()
     sch.every().monday.at("20:30").do(refeicoes)
